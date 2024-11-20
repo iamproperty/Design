@@ -1,5 +1,16 @@
+@charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+@use "sass:math";
+
+// Need to have the below so that the layers work
+@tailwind components;
+@tailwind utilities;
+
+
+@import "/node_modules/@iamproperty/components/assets/css/core.min.css";
+
+
+
 
 :root {
   -webkit-font-smoothing: antialiased;
@@ -15,6 +26,7 @@
   @apply dark:from-indigo-950 dark:to-slate-700 dark:text-white;
 }
 
+/*
 h1, h2, h3, h4, h5, h6 {
   @apply font-display;
 }
@@ -26,10 +38,22 @@ h4 { @apply text-3xl mb-4 mt-4 }
 h5 { @apply text-2xl mb-4 mt-2 }
 h6 { @apply text-xl  mb-4 mt-2 }
 
+*/
+
 html {
   @apply min-h-full;
 }
 
 hr {
   @apply my-4;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.1s;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(0.25rem);
 }

@@ -2,6 +2,9 @@ import type { Config } from 'tailwindcss'
 
 export default {
   content: [],
+  corePlugins: {
+    preflight: false,
+  },
   theme: {
     extend: {
       colors: {
