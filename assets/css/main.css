@@ -1,0 +1,35 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  -webkit-font-smoothing: antialiased;
+  --header-height: 4rem;
+
+  /* apply tailwind classes */
+  @apply font-body bg-gradient-to-tr;
+
+  /* light */
+  @apply from-indigo-50 to-slate-50 text-black;
+
+  /* dark */
+  @apply dark:from-indigo-950 dark:to-slate-700 dark:text-white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-display;
+}
+
+h1 { @apply text-6xl mb-4 }
+h2 { @apply text-5xl mb-4 mt-8 }
+h3 { @apply text-4xl mb-4 mt-6 }
+h4 { @apply text-3xl mb-4 mt-4 }
+h5 { @apply text-2xl mb-4 mt-2 }
+h6 { @apply text-xl  mb-4 mt-2 }
+
+html {
+  @apply min-h-full;
+}
+
+hr {
+  @apply my-4;
+}
