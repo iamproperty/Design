@@ -32,12 +32,12 @@
       <ul class="flex flex-1 items-center justify-end gap-4">
         <li>
           <NuxtLink to="https://iamproperty.com">
-            <Icon name="streamline:browser-website-1" />
+            
           </NuxtLink>
         </li>
         <li>
           <NuxtLink to="https://github.com">
-            <Icon name="mdi:github" />
+            
           </NuxtLink>
         </li>
       </ul>

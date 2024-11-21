@@ -13,13 +13,19 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' },
   },
   devtools: { enabled: true },
-  modules: ['@nuxt/content', '@nuxtjs/tailwindcss', 'nuxt-icon'],
+  modules: ['@nuxt/content', '@nuxtjs/tailwindcss'],
   routeRules: {
     '/': { prerender: true },
   },
   components: [
-    { path: '~/components/', pathPrefix: false },
-    { path: '~/components/layouts', pathPrefix: true },
+    { path: '~/components/', pathPrefix: false }
   ],
   compatibilityDate: '2024-11-12',
+  vue: {
+    compilerOptions: {
+      isCustomElement: (tag) => {
+        return tag.startsWith('iam-') // (return true)
+      },
+    },
+  },
 })
