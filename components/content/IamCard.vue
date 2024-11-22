@@ -2,11 +2,9 @@
 import { onMounted } from 'vue'
 
 onMounted(() => {
-  import('~/node_modules/@iamproperty/components/assets/js/components/card/card.component.min.js').then(module => {
+  import('~/node_modules/@iamproperty/components/assets/js/components/card/card.component.min.js').then((module) => {
     if (!window.customElements.get('iam-card'))
-      window.customElements.define('iam-card', module.default);
-  }).catch((err) => {
-    console.log(err.message);
+      window.customElements.define('iam-card', module.default)
   })
 })
 </script>

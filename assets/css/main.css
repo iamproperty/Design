@@ -1,17 +1,3 @@
-@charset "UTF-8";
-
-@use "sass:math";
-
-// Need to have the below so that the layers work
-@tailwind components;
-@tailwind utilities;
-
-
-@import "/node_modules/@iamproperty/components/assets/css/core.min.css";
-
-
-
-
 :root {
   -webkit-font-smoothing: antialiased;
   --header-height: 4rem;

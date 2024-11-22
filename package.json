@@ -20,6 +20,5 @@
     "nuxt-icon": "^1.0.0-beta.7"
   },
   "devDependencies": {
-    "sass-embedded": "^1.81.0"
   }
 }
