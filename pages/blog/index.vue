@@ -25,7 +25,7 @@ function navigateToArticle(path?: string) {
 </script>
 
 <template>
-  <div>
+  <main>
     <h1>Articles</h1>
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       <div
@@ -55,7 +55,7 @@ function navigateToArticle(path?: string) {
       </div>
     </div>
     <!-- <pre>{{ data }}</pre> -->
-  </div>
+  </main>
 </template>
 
 <style>
