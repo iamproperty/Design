@@ -5,15 +5,16 @@ Look at the [Content documentation](https://content.nuxtjs.org/) to learn more.
 ::IamCard
 ---
 data-test: hello
+link: /blog/get-in-touch
 ---
 hello
 <span>test</span>
 ::
 
-::IamCard
+::IamButton
 ---
-data-test: hello
+icon: fa-solid fa-code
+link: /blog/get-in-touch
 ---
-hello
-<span>test</span>
+A button
 ::

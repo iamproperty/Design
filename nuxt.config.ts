@@ -9,6 +9,12 @@ export default defineNuxtConfig({
         titleTemplate: '%s %separator %siteName',
         separator: '//',
       },
+      script: [
+        {
+          src: 'https://kit.fontawesome.com/26fdbf0179.js',
+          crossorigin: 'anonymous',
+        },
+      ],
     },
     pageTransition: { name: 'page', mode: 'out-in' },
   },
