@@ -4,6 +4,7 @@ export default {
   content: [],
   corePlugins: {
     preflight: false,
+    container: false,
   },
   theme: {
     extend: {
