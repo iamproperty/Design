@@ -34,4 +34,11 @@
    }
   }
 }
+
+@media screen and (prefers-color-scheme: dark) {
+  .invert-colours {
+    --colour-heading: white;
+    color: white;
+  }
+}
 </style>
