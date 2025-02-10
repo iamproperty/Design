@@ -1,5 +1,5 @@
 <template>
-  <div class="invert-colours bg-info gradient-primary gradient-direction-angle" v-if="true">
+  <div class="invert-colours bg-info gradient-primary gradient-direction-angle" v-if="false">
     <div class="container pt-5 pb-5 min-vh-100 d-md-flex">
       <div class="row align-items-center">
         <div class="col-12 col-md-6">
