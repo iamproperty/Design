@@ -25,7 +25,7 @@ onMounted(() => {
   <NuxtLink to="#" active-class="selected">Our principles</NuxtLink>
   <NuxtLink to="#" active-class="selected">Articles</NuxtLink>
 
-  <a class="btn btn-primary" href="https://iamproperty.github.io/">Design System</a>
+  <a class="btn btn-primary d-sm-inline-flex mt-6 lg:mt-0" href="https://iamproperty.github.io/">Design System</a>
 </iam-nav>
 </nav>
 </template>
