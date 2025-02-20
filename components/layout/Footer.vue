@@ -2,9 +2,9 @@
   <footer class="bg-primary mb-0">
     <div class="container pt-4 d-print-none">
       <ul class="list-unstyled list-inline ms-auto d-block mb-0">
-        <li class="list-inline-item me-4 ms-0 mb-2"><a href="https://iamproperty.com/" class="">iamproperty</a>
+        <li class="list-inline-item me-4 ms-0 mb-2"><a href="https://iamproperty.com/" class="decoration-[#B4E6A5] underline-offset-8">iamproperty</a>
         </li>
-        <li class="list-inline-item me-4 ms-0 mb-2"><a href="/" class="">Sitemap</a>
+        <li class="list-inline-item me-4 ms-0 mb-2"><a href="/" class="decoration-[#B4E6A5] underline-offset-8">Sitemap</a>
         </li>
       </ul>
     </div>
