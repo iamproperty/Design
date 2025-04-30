@@ -15,7 +15,7 @@ import TextMediaSection from '@/components/content/TextMediaSection.vue'
       The Team
     </h1>
 
-    <HeroSection :has-overlap="true">
+    <HeroSection>
       <template #text>
         <h2 class="h1 text-center">
           Shaping proptech through design

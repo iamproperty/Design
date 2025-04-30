@@ -26,9 +26,9 @@ const props = defineProps(['hasImage', 'hasOverlap'])
             &:after {
                 content: '';
                 width: 100%;
-                height: 24px;
-                border-top-left-radius: 24px;
-                border-top-right-radius: 24px;
+                height: 1.5rem;
+                border-top-left-radius: 1.5rem;
+                border-top-right-radius: 1.5rem;
                 background: #ffffff;
                 display: block;
                 position: absolute;
