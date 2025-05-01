@@ -21,7 +21,7 @@ onMounted(() => {
   </a>
 
   <NuxtLink to="/" active-class="selected">Home</NuxtLink>
-  <NuxtLink to="#" active-class="selected">The team</NuxtLink>
+  <NuxtLink to="/the-team" active-class="selected">The team</NuxtLink>
   <NuxtLink to="#" active-class="selected">Our principles</NuxtLink>
   <NuxtLink to="#" active-class="selected">Articles</NuxtLink>
 
