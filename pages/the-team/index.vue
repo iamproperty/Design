@@ -7,6 +7,10 @@ import collaborationImg from '@/assets/images/illustrations/collaboration-graphi
 
 import HeroSection from '@/components/content/HeroSection.vue'
 import TextMediaSection from '@/components/content/TextMediaSection.vue'
+
+useHead({
+  title: 'The team',
+})
 </script>
 
 <template>
@@ -14,7 +18,7 @@ import TextMediaSection from '@/components/content/TextMediaSection.vue'
     <h1 class="sr-only">
       The Team
     </h1>
-
+ 
     <HeroSection>
       <template #text>
         <h2 class="h1 text-center">
@@ -28,30 +32,26 @@ import TextMediaSection from '@/components/content/TextMediaSection.vue'
     </HeroSection>
 
     <section class="card-wrap col-span-full d-flex flex-wrap justify-center bg-info gradient-primary gradient-direction-left p-6">
-      <NuxtLink to="/product-design-team">
-        <IamCard :data-image="card1Img">
-          <div>
-            <p class="lead pb-2">
-              Product Design
-            </p>
-            <p class="pb-2">
-              Here would be the top level description
-            </p>
-          </div>
-        </IamCard>
-      </NuxtLink>
-      <NuxtLink to="/tech-team">
-        <IamCard :data-image="card2Img">
-          <div>
-            <p class="lead pb-2">
-              Frontend Tech
-            </p>
-            <p class="pb-2">
-              Here would be the top level description
-            </p>
-          </div>
-        </IamCard>
-      </NuxtLink>
+      <IamCard :data-image="card1Img" link="/product-design-team">
+        <div>
+          <p class="lead pb-2">
+            Product Design
+          </p>
+          <p class="pb-2">
+            Here would be the top level description
+          </p>
+        </div>
+      </IamCard>
+      <IamCard :data-image="card2Img" link="/tech-team">
+        <div>
+          <p class="lead pb-2">
+            Frontend Tech
+          </p>
+          <p class="pb-2">
+            Here would be the top level description
+          </p>
+        </div>
+      </IamCard>
     </section>
 
     <TextMediaSection>

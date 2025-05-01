@@ -1,3 +1,17 @@
+<script setup lang="ts">
+useHead({
+  // as a string,
+  // where `%s` is replaced with the title
+  titleTemplate: '%s - iamproperty Design teams',
+  meta: [
+    { name: 'description', content: 'Our design teams are involved in every iamproperty product. From discovery through to delivery and debrief. Creating, analysing and enhancing digital experiences for the customers of today and the future.' },
+  ],
+  link: [
+    { rel: 'manifest', href: '/manifest.json' },
+  ]
+})
+</script>
+
 <template>
   <div class="invert-colours bg-info gradient-primary gradient-direction-angle" v-if="false">
     <div class="container pt-5 pb-5 min-vh-100 d-md-flex">
@@ -42,5 +56,15 @@
     --colour-heading: white;
     color: white;
   }
+}
+
+#__nuxt {
+  display: contents;
+}
+
+footer {
+  position: sticky;
+  top: 100%;
+  left: 0;
 }
 </style>
