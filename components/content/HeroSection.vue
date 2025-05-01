@@ -3,7 +3,7 @@ const props = defineProps(['hasImage', 'hasOverlap'])
 </script>
 
 <template>
-  <section class="col-span-full py-6" :class="{ 'has-overlap': props.hasOverlap }">
+  <section class="hero-section col-span-full py-6" :class="{ 'has-overlap': props.hasOverlap }">
     <div class="container d-grid" :class="{ 'has-image gap-x-4': props.hasImage }">
       <div>
         <slot name="text" />
@@ -15,8 +15,8 @@ const props = defineProps(['hasImage', 'hasOverlap'])
   </section>
 </template>
 
-<style lang="scss" scoped>
-    section {
+<style lang="scss">
+    .hero-section {
         padding-block: 3.75rem;
 
         //Used to add a full width 24px rounded accent to overlap the bottom of the hero
@@ -36,16 +36,28 @@ const props = defineProps(['hasImage', 'hasOverlap'])
                 left: 0;
             }
         }
+
+        &.gradient-primary {
+            h2,
+            h3,
+            p {
+                color: #fff;
+            }
+        }
+
+        .container {
+            .image {
+                display: none;
+            }
+        }
+    
     }
 
-    .container {
-        .image {
-            display: none;
-        }
-    }
+    
+
 
     @media screen and (min-width: 62rem) {
-        .container {
+        .hero-section.container {
             grid-template-columns: 1fr 40rem 1fr;
         }
 
