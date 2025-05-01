@@ -8,7 +8,7 @@ useHead({
   ],
   link: [
     { rel: 'manifest', href: '/manifest.json' },
-  ]
+  ],
 })
 </script>
 
