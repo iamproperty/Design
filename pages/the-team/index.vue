@@ -9,6 +9,10 @@ import HeroSection from '@/components/content/HeroSection.vue'
 import TextMediaSection from '@/components/content/TextMediaSection.vue'
 import CardContainer from '@/components/content/CardContainer.vue'
 
+
+useHead({
+  title: 'The team',
+})
 </script>
 
 <template>
@@ -16,7 +20,7 @@ import CardContainer from '@/components/content/CardContainer.vue'
     <h1 class="sr-only">
       The Team
     </h1>
-
+ 
     <HeroSection>
       <template #text>
         <h2 class="h1 text-center">
