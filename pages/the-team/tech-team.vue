@@ -2,11 +2,11 @@
 import HeroSection from '@/components/content/HeroSection.vue'
 import TextMediaSection from '@/components/content/TextMediaSection.vue'
 import KeyPoints from '@/components/content/KeyPoints.vue'
-import collaborationImg from '@/assets/images/illustrations/collaboration-graphic.png'
+import teamImg from '@/assets/images/illustrations/temp-team-photo.png'
 
 import CardContainer from '@/components/content/CardContainer.vue'
 import IamCard from '@/components/content/IamCard.vue'
-import card1Img from '@/assets/images/illustrations/design-graphic.jpg'
+import card1Img from '@/assets/images/illustrations/product-team-card.png'
 import card2Img from '@/assets/images/illustrations/development-graphic.jpg'
 
 const keyTeamPoints = ref([
@@ -50,7 +50,7 @@ const keyTeamPoints = ref([
             Frontend Tech
         </h1>
 
-        <HeroSection class="bg-info gradient-primary gradient-direction-left">
+        <HeroSection class="bg-info gradient-primary gradient-direction-left mb-8">
             <template #text>
               <h2 class="h1 text-center">
                 Frontend Tech
@@ -81,7 +81,7 @@ const keyTeamPoints = ref([
                 <KeyPoints :points="keyTeamPoints"></KeyPoints>
             </template>
             <template #media>
-                <img :src="collaborationImg" alt="Laptop on desk showing website" class="w-full">
+                <img :src="teamImg" alt="Team gathered around whiteboard with post-it notes" class="w-full">
               </template>
 
           </TextMediaSection>
@@ -98,7 +98,7 @@ const keyTeamPoints = ref([
                       <p class="lead pb-2">
                         Shaping proptech through design
                       </p>
-                      <p class="pb-2">
+                      <p class="pb-0">
                         Here would be the top level description
                       </p>
                     </div>
@@ -110,7 +110,7 @@ const keyTeamPoints = ref([
                       <p class="lead pb-2">
                         Frontend Tech
                       </p>
-                      <p class="pb-2">
+                      <p class="pb-0">
                         Here would be the top level description
                       </p>
                     </div>

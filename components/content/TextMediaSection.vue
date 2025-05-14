@@ -18,6 +18,10 @@ const props = defineProps(['mediaFirst'])
     padding-block: 3.75rem;
   }
 
+  .container {
+    gap: 2rem 0;
+  }
+
   @media screen and (min-width: 62rem) {
     .container {
       grid-template-columns: 1fr 1fr;
