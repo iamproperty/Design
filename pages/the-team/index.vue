@@ -7,6 +7,8 @@ import collaborationImg from '@/assets/images/illustrations/collaboration-graphi
 
 import HeroSection from '@/components/content/HeroSection.vue'
 import TextMediaSection from '@/components/content/TextMediaSection.vue'
+import CardContainer from '@/components/content/CardContainer.vue'
+
 
 useHead({
   title: 'The team',
@@ -24,35 +26,41 @@ useHead({
         <h2 class="h1 text-center">
           Shaping proptech through design
         </h2>
-        <p class="pb-0 text-center">
+        <p class="pb-0 text-center mx-auto">
           Summary of what we do as a guild collective Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
       </template>
     </HeroSection>
 
-    <section class="card-wrap col-span-full d-flex flex-wrap justify-center bg-info gradient-primary gradient-direction-left p-6">
-      <IamCard :data-image="card1Img" link="/product-design-team">
-        <div>
-          <p class="lead pb-2">
-            Product Design
-          </p>
-          <p class="pb-2">
-            Here would be the top level description
-          </p>
-        </div>
-      </IamCard>
-      <IamCard :data-image="card2Img" link="/tech-team">
-        <div>
-          <p class="lead pb-2">
-            Frontend Tech
-          </p>
-          <p class="pb-2">
-            Here would be the top level description
-          </p>
-        </div>
-      </IamCard>
-    </section>
+    <CardContainer class="bg-info gradient-primary gradient-direction-left">
+      <template #cards>
+      <NuxtLink to="/the-team/product-design-team">
+        <IamCard :data-image="card1Img">
+          <div>
+            <p class="lead pb-2">
+              Product Design
+            </p>
+            <p class="pb-2">
+              Here would be the top level description
+            </p>
+          </div>
+        </IamCard>
+      </NuxtLink>
+      <NuxtLink to="/the-team/tech-team">
+        <IamCard :data-image="card2Img">
+          <div>
+            <p class="lead pb-2">
+              Frontend Tech
+            </p>
+            <p class="pb-2">
+              Here would be the top level description
+            </p>
+          </div>
+        </IamCard>
+      </NuxtLink>
+      </template>
+    </CardContainer>
 
     <TextMediaSection>
       <template #text>
@@ -64,8 +72,7 @@ useHead({
           and tech feasibility.
         </p>
         <p>
-          From discovery to delivery, we're hands-on every step of the way—embedding ourselves within teams and networks
-          across iamproperty to truly understand problems and opportunities.
+          From discovery to delivery, we're hands-on every step of the way—embedding ourselves within teams and networks across iamproperty to truly understand problems and opportunities.
         </p>
         <p>
           We craft innovative solutions that not only delight customers but also drive business success and align
@@ -110,15 +117,3 @@ useHead({
     </TextMediaSection>
   </main>
 </template>
-
-<style lang="scss" scoped>
-  .card-wrap {
-    padding-block: 3.75rem 2rem;
-    gap: 0 1rem;
-
-    a {
-      width: 100%;
-      max-width: 22.5rem;
-    }
-  }
-</style>
