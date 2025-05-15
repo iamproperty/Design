@@ -13,33 +13,33 @@ import card2Img from '@/assets/images/illustrations/design-graphic.jpg'
 const keyTeamPoints = ref([
     {
         icon: 'fa-brain', 
-        heading: 'We are product engineers',
-        summary: 'understanding problems holistically; building systems and applications for the future'
+        heading: 'We are product thinkers',
+        summary: 'understanding user needs. business goals and market context to design with product strategy'
     },
     {
         icon: 'fa-person', 
-        heading: 'We follow industry standards',
-        summary: 'to make sure our code is maintainable and high quality'
+        heading: 'We are user focused',
+        summary: 'through data-drvien design decisions, user research, interviews and usability testing.'
     },
     {
         icon: 'fa-badge-dollar fa-sharp', 
-        heading: 'We push boundaries',
-        summary: 'Not happy with sticking to the current technology but adopting new modern approaches'
+        heading: 'We are problem solvers',
+        summary: "focus on solving user problems through intuitive design, keeping the user's journey smooth and meaningful."
     },
     {
         icon: 'fa-user-gear', 
-        heading: 'We build for all',
-        summary: 'By making sure our applications are as accessible and usable as possible'
+        heading: 'We are cross-disciplinary',
+        summary: 'with expertise in UI and UX we create designs that are visually appealing and functionally brilliant.'
     },
     {
         icon: 'fa-handshake', 
         heading: 'We are rooted in principles',
-        summary: 'aligning to core principles as a team to deliver the best outcomes. Check out our Front-end Technology principles. '
+        summary: 'aligning to core principles as a team to deliver the best outcomes. Check out our Product Design principles. '
     },
     {
         icon: 'fa-headset', 
-        heading: 'We are influencers',
-        summary: 'Not just writing code but using our knowledge to help drive projects to completion.'
+        heading: 'We are researchers',
+        summary: 'gathering insight to inform discovery, usability testing and live product analysis to deliver improved solutions.'
     }
 ]);
 
@@ -48,16 +48,16 @@ const keyTeamPoints = ref([
 <template>
     <main>
         <h1 class="sr-only">
-            Frontend Tech
+            Product Design
         </h1>
 
         <HeroSection class="bg-info gradient-primary gradient-direction-left mb-8">
             <template #text>
               <h2 class="h1 text-center">
-                Frontend Tech
+                Product Design
               </h2>
               <p class="pb-0 text-center mx-auto">
-                We are responsible for designing, building, and maintaining the user-facing aspects of web and mobile applications. We focus on everything that users see and interact with, ensuring that it's visually appealing, accessible, and functionally sound.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna alLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna al.
               </p>
             </template>
 
@@ -66,12 +66,10 @@ const keyTeamPoints = ref([
           <section class="py-6">
             <CardContainer>
               <template #cards>
-                <TeamMemberCard name="James Lambert" position="Technical Lead" team="Core Tech team"></TeamMemberCard>
-                <TeamMemberCard name="Arthur Rigley" position="Software Engineer" team="CRM team"></TeamMemberCard>
-                <TeamMemberCard name="Nathalie Walker" position="Senior Software Engineer" team="iamsold team"></TeamMemberCard>
-                <TeamMemberCard name="Michael White" position="Software Engineer" team="Movebutler team"></TeamMemberCard>
-                <TeamMemberCard name="Michael Wheatley" position="Software Support Engineer" team="Movebutler team"></TeamMemberCard>
-                <TeamMemberCard name="Andy Woodward" position="Senior Software Engineer" team="Marketing Toolkit team"></TeamMemberCard>
+                <TeamMemberCard name="Tom Hinde" position="Lead Product Designer" team="Transformation team"></TeamMemberCard>
+                <TeamMemberCard name="Mark Clipperton" position="Product Designer" team="CRM team"></TeamMemberCard>
+                <TeamMemberCard name="Victoria McAlinden" position="Product Designer" team="iamsold team"></TeamMemberCard>
+                <TeamMemberCard name="Kevin Gibson" position="Product Designer" team="Movebutler team"></TeamMemberCard>
               </template>
 
             </CardContainer>
@@ -104,11 +102,11 @@ const keyTeamPoints = ref([
                     </div>
                   </IamCard>
                 </NuxtLink>
-                  <NuxtLink to="/the-team/product-design-team">
+                  <NuxtLink to="/the-team/tech-team">
                   <IamCard :data-image="card2Img">
                     <div>
                       <p class="lead pb-2">
-                        Product Design
+                        Frontend Tech
                       </p>
                       <p class="pb-0">
                         Here would be the top level description
