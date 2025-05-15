@@ -7,7 +7,8 @@ import teamImg from '@/assets/images/illustrations/temp-team-photo.png'
 import CardContainer from '@/components/content/CardContainer.vue'
 import IamCard from '@/components/content/IamCard.vue'
 import card1Img from '@/assets/images/illustrations/product-team-card.png'
-import card2Img from '@/assets/images/illustrations/development-graphic.jpg'
+import card2Img from '@/assets/images/illustrations/design-graphic.jpg'
+
 
 const keyTeamPoints = ref([
     {
@@ -91,12 +92,11 @@ const keyTeamPoints = ref([
 
             <CardContainer card-type="nav">
               <template #cards>
-
-                <NuxtLink to="/the-team/product-design-team">
+                <NuxtLink to="/the-team">
                   <IamCard :data-image="card1Img">
                     <div>
                       <p class="lead pb-2">
-                        Shaping proptech through design
+                        The teams
                       </p>
                       <p class="pb-0">
                         Here would be the top level description
@@ -104,11 +104,11 @@ const keyTeamPoints = ref([
                     </div>
                   </IamCard>
                 </NuxtLink>
-                <NuxtLink to="/the-team/tech-team">
+                  <NuxtLink to="/the-team/product-design-team">
                   <IamCard :data-image="card2Img">
                     <div>
                       <p class="lead pb-2">
-                        Frontend Tech
+                        Shaping proptech through design
                       </p>
                       <p class="pb-0">
                         Here would be the top level description
