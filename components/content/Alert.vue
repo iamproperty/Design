@@ -9,7 +9,7 @@ defineProps<{
     <div class="flex size-14 items-center justify-center rounded-full bg-indigo-50 p-2">
       <Icon :name="icon" class="text-2xl" />
     </div>
-    <ContentSlot :use="$slots.default" />
+    <slot></slot>
     <!-- define named slots by using `$slots.header` or `$slots.body` etc. -->
   </div>
 </template>

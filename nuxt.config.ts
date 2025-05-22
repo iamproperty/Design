@@ -24,7 +24,7 @@ export default defineNuxtConfig({
     '/': { prerender: true },
   },
   components: [
-    { path: '~/components/', pathPrefix: false }
+    { path: '~/components/', pathPrefix: false },
   ],
   compatibilityDate: '2024-11-12',
   vue: {

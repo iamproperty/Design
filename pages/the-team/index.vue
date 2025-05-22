@@ -17,15 +17,12 @@ useHead({
 
 <template>
   <main>
-    <h1 class="sr-only">
-      The Team
-    </h1>
- 
+
     <HeroSection>
       <template #text>
-        <h2 class="h1 text-center">
+        <h1 class="text-center">
           Shaping proptech through design
-        </h2>
+        </h1>
         <p class="pb-0 text-center mx-auto">
           Summary of what we do as a guild collective Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.

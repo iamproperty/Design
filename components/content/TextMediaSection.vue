@@ -1,5 +1,7 @@
 <script lang="ts" setup>
-const props = defineProps(['mediaFirst'])
+const props = defineProps<{
+  mediaFirst?: boolean
+}>()
 </script>
 
 <template>
@@ -29,6 +31,11 @@ const props = defineProps(['mediaFirst'])
 
       &:before {
         grid-column: 1 / -1;
+      }
+
+      > * {
+        grid-column:auto;
+        grid-row:auto;
       }
     }
 

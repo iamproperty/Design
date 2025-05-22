@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const props = defineProps<{
-  link: string
+  link?: string
 }>()
 
 import { onMounted } from 'vue'
@@ -14,6 +14,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <a :href="props.link" v-if="props.link"><iam-card v-bind="$attrs"><ContentSlot :use="$slots.default" unwrap="p" /></iam-card></a>
-  <iam-card v-else><ContentSlot :use="$slots.default" unwrap="p" /></iam-card>
+  <a :href="props.link" v-if="props.link"><iam-card v-bind="$attrs"><slot></slot></iam-card></a>
+  <iam-card v-else>
+    <slot></slot>
+  </iam-card>
 </template>

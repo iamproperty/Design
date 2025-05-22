@@ -35,7 +35,7 @@ useHead({
 </template>
 
 <style>
-@import url('/node_modules/@iamproperty/components/assets/css/core.min.css');
+@import url('/node_modules/@iamproperty/components/assets/css/style.min.css');
 @import url('/assets/css/main.css');
 
 @tailwind base;

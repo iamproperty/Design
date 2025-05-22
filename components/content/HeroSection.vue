@@ -4,7 +4,7 @@ const props = defineProps(['hasImage', 'hasOverlap'])
 
 <template>
   <section class="hero-section col-span-full py-6" :class="{ 'has-overlap': props.hasOverlap }">
-    <div class="container d-grid" :class="{ 'has-image gap-x-4': props.hasImage }">
+    <div class="container" :class="{ 'has-image gap-x-4': props.hasImage }">
       <div>
         <slot name="text" />
       </div>
