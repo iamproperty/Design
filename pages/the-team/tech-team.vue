@@ -69,8 +69,8 @@ const keyTeamPoints = ref([
                 <TeamMemberCard name="James Lambert" position="Technical Lead" team="Core Tech team"></TeamMemberCard>
                 <TeamMemberCard name="Arthur Rigley" position="Software Engineer" team="CRM team"></TeamMemberCard>
                 <TeamMemberCard name="Nathalie Walker" position="Senior Software Engineer" team="iamsold team"></TeamMemberCard>
-                <TeamMemberCard name="Michael White" position="Software Engineer" team="Movebutler team"></TeamMemberCard>
-                <TeamMemberCard name="Michael Wheatley" position="Software Support Engineer" team="Movebutler team"></TeamMemberCard>
+                <TeamMemberCard name="Michael White" position="Software Engineer" team="movebutler team"></TeamMemberCard>
+                <TeamMemberCard name="Michael Wheatley" position="Software Support Engineer" team="movebutler team"></TeamMemberCard>
                 <TeamMemberCard name="Andy Woodward" position="Senior Software Engineer" team="Marketing Toolkit team"></TeamMemberCard>
               </template>
 
