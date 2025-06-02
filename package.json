@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@antfu/eslint-config": "^0.41.0",
-    "@iamproperty/components": "^7.2.2--beta2",
+    "@iamproperty/components": "^7.2.2--beta3",
     "@nuxt/content": "^3.5.1",
     "@nuxtjs/tailwindcss": "^6.12.2",
     "eslint": "^8.51.0",

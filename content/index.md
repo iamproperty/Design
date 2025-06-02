@@ -1,22 +1,45 @@
-# Nuxt Content Demo
-This is the markdown file for the root page of the site.
-Look at the [Content documentation](https://content.nuxtjs.org/) to learn more.
+---
+title: 'Crafting user-centred products'
+---
 
-::IamCard
+::IamHeader
 ---
-data-test: hello
-link: /blog/get-in-touch
+image: "images/homepage_banner.png"
 ---
-hello
-<span>test</span>
+# Crafting user-centred products
+Our design teams are involved in every iamproperty product. From discovery through to delivery and debrief. Creating, analysing and enhancing digital experiences for the customers of today and the future.
 ::
 
-::IamButton
----
-icon: fa-solid fa-code
-link: /blog/get-in-touch
----
-A button
+<!-- #region BENTO -->
+::IamBento
+::
+<!-- #endregion -->
+
+
+
+<div class="md-col-end-6 mb-3" markdown="1">
+
+## Heading 2
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do incididunt ut labore et dolore magna aliqua. Ut enim ad minim exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do incididunt ut labore et dolore magna aliqua. Ut enim ad minim exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+
+</div>
+<div class="md-col-start-7 mb-5" markdown="1">
+  <a href="https://www.youtube.com/watch?v=lROFZaJcVug" class="text-decoration-none youtube-link" data-youtube="lROFZaJcVug">
+    <img src="images/thumbnail.png" alt=""></img>
+  </a>
+</div>
+
+
+
+::DesignSystemCta
+### The system behind product UI
+
+Our comprehensive set of standards, reusable components, guidelines, and tools that help our teams build consistent, cohesive user interfaces across different products and platforms.
 ::
 
-Hello
+::HomeCardContainer
+<h2 class="pb-0 pt-3 mb-5">Latest articles</h2>
+::

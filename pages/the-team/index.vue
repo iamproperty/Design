@@ -31,7 +31,6 @@ useHead({
     </HeroSection>
 
     <CardContainer class="bg-info gradient-primary gradient-direction-left">
-      <template #cards>
       <NuxtLink to="/the-team/product-design-team">
         <IamCard :data-image="card1Img">
           <div>
@@ -56,7 +55,6 @@ useHead({
           </div>
         </IamCard>
       </NuxtLink>
-      </template>
     </CardContainer>
 
     <TextMediaSection>

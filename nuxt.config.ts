@@ -23,6 +23,11 @@ export default defineNuxtConfig({
   routeRules: {
     '/': { prerender: true },
   },
+  content: {
+    renderer: {
+      anchorLinks: {h2: false, h3: false},
+    },
+  },
   components: [
     { path: '~/components/', pathPrefix: false },
   ],

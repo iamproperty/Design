@@ -1,4 +1,13 @@
 <script setup lang="ts">
+import { onMounted } from "vue";
+
+import * as helpers from './node_modules/@iamproperty/components/assets/ts/modules/helpers';
+import extendDialogs from './node_modules/@iamproperty/components/assets/ts/modules/dialogs';
+import createDataLayer from './node_modules/@iamproperty/components/assets/ts/modules/data-layer';
+import extendInputs from './node_modules/@iamproperty/components/assets/ts/modules/inputs';
+import createDynamicEvents from './node_modules/@iamproperty/components/assets/ts/modules/dynamicEvents';
+import videoSupport from './node_modules/@iamproperty/components/assets/ts/modules/videos';
+
 useHead({
   // as a string,
   // where `%s` is replaced with the title
@@ -10,6 +19,22 @@ useHead({
     { rel: 'manifest', href: '/manifest.json' },
   ],
 })
+
+onMounted(() => {
+  
+  createDataLayer();
+  createDynamicEvents();
+
+  // Global stuff
+  helpers.addBodyClasses(document.body);
+  helpers.addGlobalEvents(document.body);
+
+  extendDialogs(document.body);
+  extendInputs(document.body);
+
+  videoSupport(document.body);
+});
+
 </script>
 
 <template>
@@ -66,5 +91,9 @@ footer {
   position: sticky;
   top: 100%;
   left: 0;
+}
+
+[data-content-id]{
+  display: contents;
 }
 </style>

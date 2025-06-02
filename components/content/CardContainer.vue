@@ -1,7 +1,7 @@
 <template>
-    <div class="card-wrap col-span-full d-flex flex-wrap justify-center p-6">
-        <slot name="cards" />
-    </div>
+  <div class="card-wrap col-span-full d-flex flex-wrap justify-center p-6">
+    <slot></slot>
+  </div>
 </template>
 
 <style lang="scss">

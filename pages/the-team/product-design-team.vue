@@ -89,7 +89,6 @@ const keyTeamPoints = ref([
             <h3 class="w-100 text-center pb-0 mx-auto">Meet the rest of the team</h3>
 
             <CardContainer card-type="nav">
-              <template #cards>
                 <NuxtLink to="/the-team">
                   <IamCard :data-image="card1Img">
                     <div>
@@ -114,7 +113,6 @@ const keyTeamPoints = ref([
                     </div>
                   </IamCard>
                 </NuxtLink>
-              </template>
             </CardContainer>
         </section>
       
