@@ -15,7 +15,6 @@ Our design teams are involved in every iamproperty product. From discovery throu
 <!-- #endregion -->
 
 
-
 <div class="md-col-end-6 mb-3" markdown="1">
 
 ## Heading 2
