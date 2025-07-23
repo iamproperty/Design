@@ -1,0 +1,1 @@
+@layer components{.tabs__dropdown{display:none}iam-tabs:is(.tabs--dropdown) .tabs__dropdown{display:block}@container (min-width: 62em){iam-tabs:is(.tabs--dropdown-md) .tabs__dropdown{display:block}}}/*# sourceMappingURL=tabs.config.css.map */

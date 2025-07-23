@@ -1,0 +1,148 @@
+// Data layer Web component created
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+    event: 'customElementRegistered',
+    element: 'collapsible side menu',
+});
+class iamCollapsibleSideMenu extends HTMLElement {
+    constructor() {
+        super();
+        this.attachShadow({ mode: 'open' });
+        const assetLocation = document.body.hasAttribute('data-assets-location')
+            ? document.body.getAttribute('data-assets-location')
+            : '/assets';
+        const coreCSS = document.body.hasAttribute('data-core-css')
+            ? document.body.getAttribute('data-core-css')
+            : `${assetLocation}/css/core.min.css`;
+        const loadCSS = `@import "${assetLocation}/css/components/collapsible-side.css";`;
+        const template = document.createElement('template');
+        template.innerHTML = `
+    <style class="styles">
+    @import "${coreCSS}";
+    ${loadCSS}
+    ${this.hasAttribute('css') ? `@import "${this.getAttribute('css')}";` : ``}
+    </style>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/26fdbf0179.css" crossorigin="anonymous">
+      <div class="container" part="container">
+
+        <div class="side-menu" part="side-menu">
+          <button class="btn btn-compact fa-chevron-right btn-secondary btn-sm btn-collapse" part="btn">Open or close Collapsible menu</button>
+          
+          <div class="side-menu-content closed" part="side-menu-content">
+            <slot name="menu"></slot>
+          </div>
+        </div>
+
+        <div class="main-content" part="main-content">
+          <slot></slot>
+        </div>
+
+      </div>
+    `;
+        if (this.shadowRoot) {
+            this.shadowRoot.appendChild(template.content.cloneNode(true));
+        }
+    }
+    connectedCallback() {
+        if (!this.shadowRoot)
+            return;
+        const container = this.shadowRoot.querySelector('.container');
+        const sideMenu = this.shadowRoot.querySelector('.side-menu');
+        const sideMenuContent = this.shadowRoot.querySelector('.side-menu-content');
+        const mainContent = this.shadowRoot.querySelector('.main-content');
+        const button = this.shadowRoot.querySelector('.side-menu > .btn');
+        if (!sideMenu || !sideMenuContent || !mainContent || !button)
+            return;
+        // Load external CSS if needed
+        if (this.hasAttribute('data-css')) {
+            const styles = this.shadowRoot.querySelector('.styles');
+            if (styles) {
+                styles.insertAdjacentHTML('beforeend', `@import "${this.getAttribute('data-css')}";`);
+            }
+        }
+        // Set side nav title
+        if (!this.hasAttribute('data-title')) {
+            this.setAttribute('data-title', 'configuration');
+        }
+        sideMenuContent.insertAdjacentHTML('afterbegin', `<span class="h3">${this.getAttribute('data-title')}</span>`);
+        mainContent.insertAdjacentHTML('afterbegin', `<span class="h3">${this.getAttribute('data-title')}</span>`);
+        const titleElement = this.querySelector(':scope > :is(h1,h2,h3,h4,h5,h6)');
+        if (titleElement) {
+            titleElement.classList.add('h4', 'main-content__title');
+        }
+        if (this.hasAttribute('open') && window.innerWidth > 992) {
+            sideMenu.classList.add('open');
+            button.setAttribute('aria-expanded', 'true');
+        }
+        if (this.hasAttribute('inline')) {
+            container.classList.add('inline');
+        }
+        if (this.hasAttribute('menu-right')) {
+            sideMenu.classList.add('menu-right');
+        }
+        // Open the menu
+        button.addEventListener('click', () => {
+            if (!sideMenu.classList.contains('open')) {
+                sideMenuContent.classList.remove('closed');
+                setTimeout(function () {
+                    sideMenu.classList.add('open');
+                    button.setAttribute('aria-expanded', 'true');
+                }, 100);
+            }
+            else {
+                sideMenu.classList.remove('open');
+                button.removeAttribute('aria-expanded');
+                setTimeout(function () {
+                    sideMenuContent.classList.add('closed');
+                }, 1000); // Delay until its close so the animation is broken
+                // While the menu is closing dont allow the hover to re-open it until its fully closed.
+                sideMenu.classList.add('pe-none');
+                setTimeout(function () {
+                    sideMenu.classList.remove('pe-none');
+                }, 1000);
+            }
+        });
+        // Mimic hover event on desktop so that we can control when classes are set and which order
+        sideMenu.addEventListener('mouseenter', () => {
+            if (window.innerWidth > 992) {
+                if (!sideMenu.classList.contains('open'))
+                    sideMenuContent.classList.remove('closed');
+                sideMenu.classList.add('hover');
+            }
+        });
+        sideMenu.addEventListener('mousemove', () => {
+            if (window.innerWidth > 992) {
+                if (!sideMenu.classList.contains('open'))
+                    sideMenuContent.classList.remove('closed');
+            }
+        });
+        sideMenu.addEventListener('mouseleave', () => {
+            if (window.innerWidth > 992) {
+                sideMenu.classList.remove('hover');
+                if (!sideMenu.classList.contains('open'))
+                    setTimeout(function () {
+                        sideMenuContent.classList.add('closed');
+                    }, 1000); // Delay until its close so the animation is broken
+            }
+        });
+        const sideMenuParentGroups = this.querySelectorAll('.parent');
+        const sideMenuParentGroupsTopLinks = this.querySelectorAll('.parent > li:first-of-type');
+        sideMenuParentGroupsTopLinks === null || sideMenuParentGroupsTopLinks === void 0 ? void 0 : sideMenuParentGroupsTopLinks.forEach((parentLink) => {
+            parentLink.addEventListener('click', () => {
+                if (!parentLink || !parentLink.parentElement)
+                    return false; // make sure elements exist
+                if (parentLink.parentElement.classList.contains('reveal')) {
+                    parentLink.parentElement.classList.remove('reveal'); // remove if clicking a revealed parent
+                }
+                else {
+                    // remove other reveals and add reveal to this one
+                    sideMenuParentGroups === null || sideMenuParentGroups === void 0 ? void 0 : sideMenuParentGroups.forEach((parentGroup) => {
+                        parentGroup.classList.remove('reveal');
+                    });
+                    parentLink.parentElement.classList.add('reveal');
+                }
+            });
+        });
+    }
+}
+export default iamCollapsibleSideMenu;
