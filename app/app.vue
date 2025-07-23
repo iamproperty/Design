@@ -92,6 +92,7 @@ footer {
   left: 0;
 }
 
+main > div:first-child:not(.meta),
 [data-content-id]{
   display: contents;
 }
