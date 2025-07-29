@@ -1,7 +1,6 @@
 ---
 title: 'Crafting user-centred products'
 ---
-
 ::IamHeader
 ---
 image: "images/homepage_banner.png"
@@ -16,7 +15,6 @@ Our design teams are involved in every iamproperty product. From discovery throu
 <!-- #endregion -->
 
 
-
 <div class="md-col-end-6 mb-3" markdown="1">
 
 ## Heading 2
@@ -28,7 +26,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do incididunt ut la
 </div>
 <div class="md-col-start-7 mb-5" markdown="1">
   <a href="https://www.youtube.com/watch?v=lROFZaJcVug" class="text-decoration-none youtube-link" data-youtube="lROFZaJcVug">
-    <img src="images/thumbnail.png" alt=""></img>
+    <img src="images/thumbnail.png" alt="">
   </a>
 </div>
 
@@ -41,5 +39,5 @@ Our comprehensive set of standards, reusable components, guidelines, and tools t
 ::
 
 ::HomeCardContainer
-<h2 class="pb-0 pt-3 mb-5">Latest articles</h2>
+<h2 class="pb-0 pt-3">Latest articles</h2>
 ::

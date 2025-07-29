@@ -18,7 +18,7 @@ export default defineNuxtConfig({
     },
     pageTransition: { name: 'page', mode: 'out-in' },
   },
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   modules: ['@nuxt/content', '@nuxtjs/tailwindcss'],
   routeRules: {
     '/': { prerender: true },

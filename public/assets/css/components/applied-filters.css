@@ -1,0 +1,1 @@
+.applied-filters:not(.applied-filters--compact):not(:empty):before{content:"Applied filters";font-weight:bold;font-size:1.125rem;line-height:1.375rem;color:var(--colour-header);display:block}:host(.applied-filters--hide-title) .applied-filters:before{display:none}:host(.applied-filters--show-set) .tag--not-set{display:none}/*# sourceMappingURL=applied-filters.css.map */
