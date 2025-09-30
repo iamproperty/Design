@@ -2,37 +2,29 @@
 import card1Img from '@/assets/images/illustrations/product-team-card.png'
 import card2Img from '@/assets/images/illustrations/design-graphic.jpg'
 import card3Img from '@/assets/images/illustrations/development-graphic.jpg'
-
-
+import IamCard from '@/components/content/IamCard.vue'
 </script>
+
 <template>
   <main>
-    <h1 class="text-center">Design for our Customers</h1>
-    <div class="lorem-text text-primary pb-4"><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna alLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna al.</strong></div>
+    <h1>Design for our Customers</h1>
+    <div class="lorem-text text-primary"><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna alLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna al.</strong></div>
 
-    <div class="make-it  visualtest colour-block bg-info gradient-primary gradient-direction-angle">
-        <div class="intuitive-card col bg-white p-4 shadow">
-          <span class="pb-3 d-block text-uppercase">Intuitive</span>
-          <a href="/client-onbaording">
-            <Card class="card colour-block bg-info gradient-primary gradient-direction-angle text-white">Make it intuitive</Card>
-          </a>
-        </div>
+    <div class="make-it visualtest colour-block bg-info gradient-primary gradient-direction-angle">
+          <div>
+            <img class="intuitive-card" src="assets/images/illustrations/Intuitive.png" alt="intuitive-image">
+          </div>
 
-        <div class="empowering-card col bg-white p-4 shadow">
-          <span class="pb-3 d-block text-uppercase">Empowering</span>
-          <a href="/client-onbaording">
-            <Card class="card colour-block bg-info gradient-primary gradient-direction-angle text-white">Make it empowering</Card>
-          </a>
-        </div>
-
-        <div class="delightful-card col bg-white p-4 shadow">
-          <span class="pb-3 d-block text-uppercase">Delightful</span>
-          <a href="/client-onbaording">
-            <Card class="card colour-block bg-info gradient-primary gradient-direction-angle text-white">Make it Delightful</Card>
-          </a>
-        </div>
+          <div>
+            <img class="intuitive-card" src="assets/images/illustrations/Empowering.png" alt="empowering-image">
+          </div>
+        
+          <div>
+            <img class="intuitive-card" src="assets/images/illustrations/Delightful.png" alt="delightful-image">
+          </div>
+       
     </div>
-    <div>
+    <div class="center-divs">
       <div class="intuitive">
         <div>
           <h2>Intuitive</h2>
@@ -84,30 +76,27 @@ import card3Img from '@/assets/images/illustrations/development-graphic.jpg'
     </div>
     <div class="container visualtest">
         <div class="col">
-          <span class="pb-3 d-block text-uppercase">Default State</span>
-          <a href="/client-onbaording">
-            <IamCard :data-image="card2Img"
-              >Product Design<span>Here would be the top level description</span></IamCard
-            >
-          </a>
+          <NuxtLink>
+            <IamCard :data-image="card2Img">
+              Product Design<span>Here would be the top level description</span>
+            </IamCard>
+          </NuxtLink>
         </div>
 
         <div class="col">
-          <span class="pb-3 d-block text-uppercase">Hover/focus State</span>
-          <a href="/client-onbaording">
-            <IamCard :data-image="card1Img"
-              >Financial preparation <span>Here would be the top level description of the task</span></IamCard
-            >
-          </a>
+          <NuxtLink>
+            <IamCard :data-image="card1Img">
+              Content Design<span>Here would be the top level description</span>
+            </IamCard>
+          </NuxtLink>
         </div>
 
         <div class="col">
-          <span class="pb-3 d-block text-uppercase">Active State</span>
-          <a href="/client-onbaording">
-            <IamCard :data-image="card3Img"
-              >Financial preparation <span>Here would be the top level description of the task</span></IamCard
-            >
-          </a>
+          <NuxtLink>
+            <IamCard :data-image="card3Img">
+              Frontend Tech<span>Responsible for building, and maintaining the user-facing aspects of web applications</span>
+            </IamCard>
+          </NuxtLink>
         </div>
       
     </div>
@@ -116,17 +105,28 @@ import card3Img from '@/assets/images/illustrations/development-graphic.jpg'
 
 <style>
 /* top */
-.lorem-text{
+h1, .lorem-text {
   text-align: center;
 }
 
+.lorem-text {
+  padding-bottom: 20px;
+  width: 50%;
+  margin: 0 auto;
+}
 /* middle */
+.center-divs {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .card {
   border-radius: 4px;
 }
 
 .make-it{
   display: flex;
+  justify-content: center;
   flex-direction: row;
   grid-column: 1 / -1;
   padding: 50px;
@@ -173,40 +173,17 @@ import card3Img from '@/assets/images/illustrations/development-graphic.jpg'
   background-color: #9D9D9D;
   width: 32rem;
   max-width: 100%;
-  height: 302px;
   border-radius: 12px;
   margin-left: 20px;
 }
 
-@media (max-width: 768px) {
-  .grey-square {
-    width: 100%;
-    min-height: 302px;
-    margin-left: 0;
-    margin-top: 1rem; 
-  }
-}
 
 .grey-square-enpowering {
   background-color: #9D9D9D;
   width: 32rem;
   max-width: 100%;
-  height: 302px;
   border-radius: 12px;
   margin-right: 20px;
-}
-
-@media (max-width: 768px) {
- .grey-square-enpowering {
-    width: 100%;
-    min-height: 302px; /* keeps visibility */
-    margin-left: 0;
-    margin-top: 1rem;
-    order: 2;   /* prevents overflow */
-  }
-  .enpowering-text {
-    order: 1;
-  }
 }
 
 /* bottom */
@@ -217,6 +194,7 @@ import card3Img from '@/assets/images/illustrations/development-graphic.jpg'
 }
 
 .col {
+  display: flex;
   flex: 1
 }
 
@@ -236,5 +214,24 @@ import card3Img from '@/assets/images/illustrations/development-graphic.jpg'
   .container > div, .make-it > div, .intuitive > div, .delightful > div, .enpowering > div {
     width: 100%;
   }
+
+  .grey-square-enpowering {
+    width: 100%;
+    min-height: 302px;
+    margin-left: 0;
+    margin-top: 1rem;
+    order: 2;
+  }
+  .enpowering-text {
+    order: 1;
+  }
+
+   .grey-square {
+    width: 100%;
+    min-height: 302px;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
 }
+
 </style>
