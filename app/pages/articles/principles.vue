@@ -3,78 +3,93 @@ import card1Img from '@/assets/images/illustrations/product-team-card.png'
 import card2Img from '@/assets/images/illustrations/design-graphic.jpg'
 import card3Img from '@/assets/images/illustrations/development-graphic.jpg'
 import IamCard from '@/components/content/IamCard.vue'
+import HeroSection from '@/components/content/HeroSection.vue'
+import TextMediaSection from '@/components/content/TextMediaSection.vue'
+import CardContainer from '~/components/content/CardContainer.vue'
+
 </script>
 
 <template>
   <main>
-    <h1>Design for our Customers</h1>
-    <div class="lorem-text text-primary"><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna alLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna al.</strong></div>
-
+    <HeroSection>
+      <template #text>
+        <h1>Design for our Customers</h1>
+        <div class="lorem-text"><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna alLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna al.</strong></div>
+      </template>
+    </HeroSection>
     <div class="make-it visualtest colour-block bg-info gradient-primary gradient-direction-angle">
           <div>
             <img class="intuitive-card" src="assets/images/illustrations/Intuitive.png" alt="intuitive-image">
           </div>
 
           <div>
-            <img class="intuitive-card" src="assets/images/illustrations/Empowering.png" alt="empowering-image">
+            <img class="empowering-card" src="assets/images/illustrations/Empowering.png" alt="empowering-image">
           </div>
         
           <div>
-            <img class="intuitive-card" src="assets/images/illustrations/Delightful.png" alt="delightful-image">
+            <img class="delighful-card" src="assets/images/illustrations/Delightful.png" alt="delightful-image">
           </div>
-       
     </div>
-    <div class="center-divs">
-      <div class="intuitive">
-        <div>
-          <h2>Intuitive</h2>
-          <p>Our products are made easy to use by intuitive interconnectivity, simplifying complexity, and streamlining efficiency, so our customers can do more quicker and be effective during their day.</p>
 
-          <h4>iamproperty values</h4>
-          <div class="iap-values">
-            <div class="values">Effective</div>
-            <div class="values">Collaborative</div>
-            <div class="values">Customer focused</div>
+      <TextMediaSection>
+        <template #text>
+            <h2>Intuitive</h2>
+            <p>Our products are made easy to use by intuitive interconnectivity, simplifying complexity, and streamlining efficiency, so our customers can do more quicker and be effective during their day.</p>
+
+            <h4>iamproperty values</h4>
+            <ul class="iap-values">
+              <li class="values">Effective</li>
+              <li class="values">Collaborative</li>
+              <li class="values">Customer focused</li>
+            </ul>
+        </template>
+        <template #media>
+            <div class="grey-square"></div>
+        </template>
+      </TextMediaSection>
+    
+
+      <TextMediaSection :media-first="true">
+        <template #text>
+          <div class="empowering-text">
+            <h2>Empowering</h2>
+            <p>Our products empower through incentivising, loyalty and actionable insight which allows customers to take control in shaping their path within the products.</p>
+
+            <h4>iamproperty values</h4>
+            <ul class="iap-values">
+              <li class="values">Effective</li>
+              <li class="values">Collaborative</li>
+              <li class="values">Customer focused</li>
+            </ul>
           </div>
-        </div>
-        <div class="grey-square"></div>
-      </div>
+        </template>
+        <template #media>
+            <div class="grey-square-empowering"></div>
+        </template>
+      </TextMediaSection>
 
-      <div class="enpowering">
-        <div class="grey-square-enpowering"></div>
-        <div class="enpowering-text">
-          <h2>Enpowering</h2>
-          <p>Our products empower through incentivising, loyalty and actionable insight which allows customers to take control in shaping their path within the products.</p>
-
-          <h4>iamproperty values</h4>
-          <div class="iap-values">
-            <div class="values">Effective</div>
-            <div class="values">Collaborative</div>
-            <div class="values">Customer focused</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="delightful">
-        <div>
+      <TextMediaSection>
+        <template #text>
           <h2>Delightful</h2>
           <p>Our products are built with meaningful interactions and beautiful design which combine to deliver an enrich experience for our customers across the ecosystem.</p>
 
           <h4>iamproperty values</h4>
-          <div class="iap-values">
-            <div class="values">Effective</div>
-            <div class="values">Collaborative</div>
-            <div class="values">Customer focused</div>
-          </div>
-        </div>
+          <ul class="iap-values">
+            <li class="values">Effective</li>
+            <li class="values">Collaborative</li>
+            <li class="values">Customer focused</li>
+          </ul>
+        </template>
         
-        <div class="grey-square"></div>
-      </div>
-    </div>
+        <template #media>
+            <div class="grey-square"></div>
+        </template>
+      </TextMediaSection>
+    
     <div class="principles">
       <h3>Specific team principles</h3>
     </div>
-    <div class="container visualtest">
+    <CardContainer>
         <div class="col">
           <NuxtLink>
             <IamCard :data-image="card2Img">
@@ -98,8 +113,7 @@ import IamCard from '@/components/content/IamCard.vue'
             </IamCard>
           </NuxtLink>
         </div>
-      
-    </div>
+    </CardContainer>
   </main>
 </template>
 
@@ -110,19 +124,10 @@ h1, .lorem-text {
 }
 
 .lorem-text {
-  padding-bottom: 20px;
-  width: 50%;
+  width: 70%;
   margin: 0 auto;
 }
 /* middle */
-.center-divs {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-.card {
-  border-radius: 4px;
-}
 
 .make-it{
   display: flex;
@@ -137,29 +142,13 @@ h1, .lorem-text {
   border-radius: 4px;
 }
 
-.intuitive, .delightful, .enpowering {
-  display: flex;
-  flex-direction: row;
-  padding: 50px 0px 50px 0px;
-
-}
-
-.intuitive > div {
-  flex: 1;
-}
-
-.delightful > div {
-  flex: 1;
-}
-
-.enpowering > div {
-  flex: 1;
-}
-
 .iap-values {
   display: flex;
   flex-direction: row;
   gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .values {
@@ -174,27 +163,23 @@ h1, .lorem-text {
   width: 32rem;
   max-width: 100%;
   border-radius: 12px;
-  margin-left: 20px;
+  flex-shrink: 0;
+  height: 20rem;
 }
 
-
-.grey-square-enpowering {
+.grey-square-empowering {
   background-color: #9D9D9D;
   width: 32rem;
   max-width: 100%;
   border-radius: 12px;
-  margin-right: 20px;
+  flex-shrink: 0;
+  height: 20rem;
 }
 
 /* bottom */
-.container {
-  display: flex;
-  flex-direction: row;
-  gap: 25px;
-}
-
 .col {
   display: flex;
+  justify-content: center;
   flex: 1
 }
 
@@ -206,23 +191,23 @@ h1, .lorem-text {
 /* media queries */
 
 @media (max-width: 768px) {
-  .container, .make-it, .intuitive, .delightful, .enpowering {
+  .make-it {
   display: flex;
   flex-direction: column;
   }
 
-  .container > div, .make-it > div, .intuitive > div, .delightful > div, .enpowering > div {
+  .make-it > div {
     width: 100%;
   }
 
-  .grey-square-enpowering {
+  .grey-square-empowering {
     width: 100%;
     min-height: 302px;
     margin-left: 0;
     margin-top: 1rem;
     order: 2;
   }
-  .enpowering-text {
+  .empowering-text {
     order: 1;
   }
 
@@ -233,5 +218,4 @@ h1, .lorem-text {
     margin-top: 1rem;
   }
 }
-
 </style>
