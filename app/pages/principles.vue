@@ -19,15 +19,15 @@ import CardContainer from '~/components/content/CardContainer.vue'
     </HeroSection>
     <div class="make-it visualtest colour-block bg-info gradient-primary gradient-direction-angle">
           <div>
-            <img class="intuitive-card" src="assets/images/illustrations/Intuitive.png" alt="intuitive-image">
+            <img class="principle-card" src="assets/images/illustrations/Intuitive.png" alt="Make it intuitive">
           </div>
 
           <div>
-            <img class="empowering-card" src="assets/images/illustrations/Empowering.png" alt="empowering-image">
+            <img class="principle-card" src="assets/images/illustrations/Empowering.png" alt="Make it empowering">
           </div>
         
           <div>
-            <img class="delighful-card" src="assets/images/illustrations/Delightful.png" alt="delightful-image">
+            <img class="principle-card" src="assets/images/illustrations/Delightful.png" alt="Make it delightful">
           </div>
     </div>
 
@@ -138,7 +138,7 @@ h1, .lorem-text {
   gap: 1rem;
 }
 
-.intuitive-card, .empowering-card, .delightful-card{
+.principle-card {
   border-radius: 4px;
 }
 
