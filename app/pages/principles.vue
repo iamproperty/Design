@@ -129,7 +129,7 @@ h1, .lorem-text {
 }
 /* middle */
 
-.make-it{
+.make-it {
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -206,9 +206,6 @@ h1, .lorem-text {
     margin-left: 0;
     margin-top: 1rem;
     order: 2;
-  }
-  .empowering-text {
-    order: 1;
   }
 
    .grey-square {
